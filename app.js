@@ -137,23 +137,27 @@ function audioPlayer() {
             $(".defeated").fadeToggle(2500);
             defeated = true;
                 console.log("defeated background is " + defeated);
-                $(".cloud").fadeToggle(2500);
-                $(".lightning2").fadeToggle(2500);
-                lightning2 = true;
+                
+                if(lightning2 == false){
+                    $(".lightning2").fadeToggle(2500);
+                    lightning2 = true;
+                    $(".cloud").fadeToggle(2500);
+                }
+                
             
         }
         if(currentSong !== 4 && defeated == true){
-            if(rain == true && totw == true){
-                rain = true;
-                
-            }
-            if(rain == false && totw == false){
-                rain = false;
+          
                 $(".defeated").fadeToggle(2500);
                
                 defeated = false;
             console.log("defeated background is " + defeated);
             $(".cloud").fadeToggle(2500);
+            
+            if(lightning2 == true){
+                $(".lightning2").fadeToggle(2500);
+                lightning2 = false;
+                $(".cloud").fadeToggle(2500);
             }
         }
        
