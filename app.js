@@ -155,6 +155,7 @@ function audioPlayer() {
             $(".cloud").fadeToggle(2500);
             
             if(lightning2 == true){
+                
                 $(".lightning2").fadeToggle(2500);
                 lightning2 = false;
                 $(".cloud").fadeToggle(2500);
